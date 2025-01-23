@@ -1,71 +1,36 @@
 <script setup>
-// <!-- PART2 -->
-
-const dislayName = () => {
-  console.log('Je mappelle Yassine')
-}
-
-const displayName2 = () => {
-  alert("Je m'appelle Yassine")
-}
-
-// <!-- PART 3 -->
-
-const colors = {
-  bleue: '#23b8d3',
-  violette: '#a519a5',
-  orange: '#ffa500',
-  verte: '#44f178',
-}
-
-const displayColor = (color) => {
-  alert(`Il s'agit de la couleur ${color} dont le code hexadécimal est '${colors[color]}'.'`)
-}
-
-// PART4
-
-const randomNumber = (max) => {
-  alert(Math.floor(Math.random() * max))
-}
+import part1 from './components/part1.vue'
+import part2 from './components/part2.vue'
+import part3 from './components/part3.vue'
+import part4 from './components/part4.vue'
+import part5 from './components/part5.vue'
+import part6 from './components/part6.vue'
+import Bonus1 from './components/Bonus1.vue'
+import Bonus2 from './components/Bonus2.vue'
+import Bonus3 from './components/Bonus3.vue'
 </script>
 
 <template>
   <main>
-    <!-- PART1 -->
     <h1>Crazy clics</h1>
-    <section class="part1">
-      <button v-on:click="console.log('Hello World !')">Affiche un message dans la console</button>
-      <button @click="console.log('Bienvenue au Reacteur !')">
-        Affiche un autre message dans la console
-      </button>
-    </section>
 
-    <!-- PART2 -->
+    <part1 />
 
-    <section class="part2">
-      <button @click="dislayName()">Comment t'appelles-tu ?</button>
+    <part2 />
 
-      <button @click="displayName2()">Comment t'appelles-tu ?</button>
-    </section>
+    <part3 />
 
-    <!-- PART3 -->
+    <part4 />
 
-    <section class="part3">
-      <div><h2>De quelle couleur s'agit-il ?</h2></div>
+    <part5 />
 
-      <div>
-        <button id="blue-button" @click="displayColor('bleue')"></button>
-        <button id="purple-button" @click="displayColor('violette')"></button>
-        <button id="orange-button" @click="displayColor('orange')"></button>
-        <button id="green-button" @click="displayColor('verte')"></button>
-      </div>
-    </section>
+    <part6 />
 
-    <!-- PART4 -->
+    <bonus1 />
 
-    <section class="part4">
-      <div><button @click="randomNumber(100)">Chiffre surprise</button></div>
-    </section>
+    <Bonus2 />
+
+    <Bonus3 />
   </main>
 </template>
 
